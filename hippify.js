@@ -5,22 +5,22 @@ var isMobile = (function(a){jQuery.browser.mobile=/android.+mobile|avantgo|bada\
 // hippify: high ppi image swap
 // colbyfayock.com
 (function( $ ){
-
-  $.fn.hippify = function() {
-
     var img = $('img'),
         isHippi = function() {
             return window.devicePixelRatio > 1;
         };
 
-    img.each(function() {
-        var that = $(this),
-            src = that.attr('src');
-        if(that.attr('data-hippi')) {
-            var hippi = src.replace(/(.jpg|.jpeg|.png|.gif|.bmp)/, '@2x$1');
-            $.ajax(hippi).done(function() { that.attr('src', hippi); });
-        }
-    });
+    $.fn.hippify = function() {
+        this.each(function() {
+            var that = $(this),
+                src = that.attr('src');
+            if(that.attr('data-hippi')) {
+                var hippi = src.replace(/(.jpg|.jpeg|.png|.gif|.bmp)/, '@2x$1');
+                $.ajax(hippi).done(function() { that.attr('src', hippi); });
+            }
+        });
+    };
 
-  };
+    if(isHippi && !isMobile) img.hippify();
+
 })( jQuery );
