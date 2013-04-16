@@ -13,9 +13,9 @@ var isMobile = (function(a){jQuery.browser.mobile=/android.+mobile|avantgo|bada\
     $.fn.hippify = function() {
         this.each(function() {
             var that = $(this),
-                src = that.attr('src');
+                src = that.attr('src'),
+                hippi = src.replace(/(.jpg|.jpeg|.png|.gif|.bmp)/, '@2x$1');
             if(that.attr('data-hippi')) {
-                var hippi = src.replace(/(.jpg|.jpeg|.png|.gif|.bmp)/, '@2x$1');
                 $.ajax(hippi).done(function() { that.attr('src', hippi); });
             }
         });
