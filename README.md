@@ -6,7 +6,7 @@ Swap high resolution images on non-mobile high ppi displays
 How to Use
 -------
 
-Include hippify.min.js after jQuery
+Include hippify.min.js before ```</body>``` after jQuery
 
 ```html
 <script src="js/hippify.min.js"></script>
@@ -14,8 +14,11 @@ Include hippify.min.js after jQuery
 
 Include high resolution image with @2x before extention in the same directory
 
-> image.jpg  
-> image@2x.jpg
+```html
+images
+- image.jpg  
+- image@2x.jpg
+```
 
 Add attribute data-hippi="true" to image tag
 
