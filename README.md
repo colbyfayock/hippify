@@ -22,3 +22,9 @@ Add attribute data-hippi="true" to image tag
 ```html
 <img data-hippi="true" src="image.jpg" />
 ```
+
+Uses
+-------
+[Detect Mobile Browsers] [1]
+
+[1]: http://detectmobilebrowsers.com/ "Detect Mobile Browsers"
