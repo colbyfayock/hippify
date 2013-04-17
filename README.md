@@ -9,7 +9,7 @@ How to Use
 Include hippify.min.js after jQuery
 
 ```html
-    <script src="js/hippify.min.js"></script>
+<script src="js/hippify.min.js"></script>
 ```
 
 Include high resolution image with @2x before extention in the same directory
@@ -20,5 +20,5 @@ Include high resolution image with @2x before extention in the same directory
 Add attribute data-hippi="true" to image tag
 
 ```html
-    <img data-hippi="true" src="image.jpg" />
+<img data-hippi="true" src="image.jpg" />
 ```
