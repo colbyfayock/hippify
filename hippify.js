@@ -35,6 +35,8 @@
         }
     };
 
-    hippify();
+    window.onload = function(){
+        hippify();
+    };
 
 })(window);
