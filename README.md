@@ -6,7 +6,7 @@ Swap high resolution images on non-mobile high ppi displays
 How to Use
 -------
 
-Include hippify.min.js before ```</body>``` after jQuery
+Include hippify.min.js before ```</body>```
 
 ```html
 <script src="js/hippify.min.js"></script>
