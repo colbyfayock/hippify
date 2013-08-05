@@ -1,5 +1,7 @@
-// hippify: high ppi image swap
-// colbyfayock.com
+/*
+ * hippify: high ppi image swap
+ * colbyfayock.com
+ */
 (function(){
 
     var hippify = function() {
