@@ -20,10 +20,18 @@ images
 - image@2x.jpg
 ```
 
-Add attribute data-hippi="true" to image tag
+Add class .hippify to image tag
 
 ```html
-<img data-hippi="true" src="image.jpg" />
+<img class="hippify" src="image.jpg" />
+```
+
+This automatically will swap to your @2x image.
+
+If you would prefer to specify your replacement image, add attribute data-hippi-src="path-to-image/image@2x.jpg" to image tag
+
+```html
+<img class="hippify" src="image.jpg" data-hippi-src="path-to-image/image@2x.jpg" />
 ```
 
 Uses
