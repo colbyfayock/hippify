@@ -23,7 +23,7 @@ images
 Add class .hippify to image tag
 
 ```html
-<img class="hippify" src="image.jpg" />
+<img class="hippify" data-hippi="true" src="image.jpg" />
 ```
 
 This automatically will swap to your @2x image.
