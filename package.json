@@ -1,0 +1,10 @@
+{
+  "name": "hippify",
+  "description": "High PPI image replacement",
+  "author": "@colbyfayock - colbyfayock.com",
+  "version": "0.3",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-uglify": "~0.2.7"
+  }
+}
