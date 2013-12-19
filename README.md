@@ -28,11 +28,13 @@ Add class .hippify to image tag
 
 If it's relative pathing, this will automatically swap to your @2x image after a test to make sure it exists.
 
-If your file is remote or would prefer to specify your replacement image path, add attribute data-hippi-src="path-to-image/image@2x.jpg" to your image tag
+If your files are remote or would prefer to specify your replacement image path, add attribute data-hippi-src="path-to-image/image@2x.jpg" to your image tag
 
 ```html
 <img class="hippify" src="image.jpg" data-hippi-src="path-to-image/image@2x.jpg" />
 ```
+
+Please note, if files are not relative, no check will be made to see if the file exists.
 
 Uses
 -------
