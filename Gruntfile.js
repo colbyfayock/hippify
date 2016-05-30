@@ -6,6 +6,7 @@ module.exports = function(grunt) {
         options: {
             banner: '/*!\n' +
                 ' * <%= pkg.name %> - <%= pkg.description %>\n' +
+                ' * http://colbyfayock.github.io/hippify/\n' +
                 ' * Version: <%= pkg.version %>\n' +
                 ' * <%= pkg.author %>\n' +
                 ' */\n'

@@ -1,5 +1,6 @@
 /*!
  * hippify - High PPI image replacement
+ * http://colbyfayock.github.io/hippify/
  * Version: 0.5.0
  * @colbyfayock - colbyfayock.com
  */
