@@ -12,8 +12,8 @@ module.exports = function(grunt) {
                 ' */\n'
       },
       build: {
-        src: 'src/<%= pkg.name %>.js',
-        dest: '<%= pkg.name %>.min.js'
+        src: 'hippify/<%= pkg.name %>.js',
+        dest: 'hippify/<%= pkg.name %>.min.js'
       }
     }
   });

@@ -10,6 +10,13 @@
     <link rel="stylesheet" href="./assets/css/zurg.min.css" />
 
     <style type="text/css">
+        .align-center {
+            text-align: center;
+        }
+        .row {
+            max-width: 800px;
+            margin: 0 auto;
+        }
         .hippify-off,
         .hippify-on {
             padding: .5em;
@@ -29,34 +36,46 @@
     <header class="container content">
         <div class="row">
             <h1 class="twelvecol">Sample hippify.js page</h1>
-            <h2 class="twelvecol">Easy high PPI image replacement</h2>
+            <h2 class="twelvecol">Easy, no-jQuery high PPI image replacement</h2>
         </div>
     </header>
 
     <section class="container content">
         <div class="row">
-            <ul class="thumb-gallery thumb-four">
+            <ul class="thumb-gallery">
                 <li>
                     <span>
-                        <img src="./assets/images/sports.jpg" />
+                        <img src="./assets/images/galaxy.jpg" />
                     </span>
                     <h4 class="hippify-off">hippify Off</h4>
                 </li>
                 <li>
                     <span>
-                        <img class="hippify" data-hippi="true" src="./assets/images/sports.jpg" />
+                        <img class="hippify" data-hippi="true" src="./assets/images/galaxy.jpg" data-hippi-src="./assets/images/galaxy@2x.jpg" />
                     </span>
                     <h4 class="hippify-on">hippify On</h4>
                 </li>
                 <li>
                     <span>
-                        <img src="./assets/images/technics.jpg" />
+                        <img src="./assets/images/sun.jpg" />
                     </span>
                     <h4 class="hippify-off">hippify Off</h4>
                 </li>
                 <li>
                     <span>
-                        <img class="hippify" data-hippi-src="./assets/images/technics@2x.jpg" src="./assets/images/technics.jpg" />
+                        <img class="hippify" data-hippi="true" src="./assets/images/sun.jpg" data-hippi-src="./assets/images/sun@2x.jpg" />
+                    </span>
+                    <h4 class="hippify-on">hippify On</h4>
+                </li>
+                <li>
+                    <span>
+                        <img src="./assets/images/earth.jpg" />
+                    </span>
+                    <h4 class="hippify-off">hippify Off</h4>
+                </li>
+                <li>
+                    <span>
+                        <img class="hippify" data-hippi="true" src="./assets/images/earth.jpg" data-hippi-src="./assets/images/earth@2x.jpg" />
                     </span>
                     <h4 class="hippify-on">hippify On</h4>
                 </li>
@@ -66,14 +85,14 @@
 
     <footer class="container footer">
         <div class="row">
-            <p>
-                Pictures via <a href="http://lorempixel.com/">lorempixel.com</a>
+            <p class="align-center">
+                Pictures via <a href="http://nasa.gov/">nasa.gov</a>
             </p>
         </div>
     </footer>
 
     <script src="./assets/js/jquery.min.js"></script>
-    <script src="./hippify.min.js"></script>
+    <script src="../hippify/hippify.min.js"></script>
 
 </body>
 
