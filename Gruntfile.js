@@ -1,27 +1,34 @@
 module.exports = function(grunt) {
 
-  // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     uglify: {
-      options: {
-        banner: '/*!\n' +
+        options: {
+            banner: '/*!\n' +
                 ' * <%= pkg.name %> - <%= pkg.description %>\n' +
                 ' * Version: <%= pkg.version %>\n' +
                 ' * <%= pkg.author %>\n' +
                 ' */\n'
-      },
-      build: {
-        src: 'hippify/<%= pkg.name %>.js',
-        dest: 'hippify/<%= pkg.name %>.min.js'
-      }
-    }
+        },
+        build: {
+            src: 'hippify/<%= pkg.name %>.js',
+            dest: 'hippify/<%= pkg.name %>.min.js'
+        }
+    },
+    watch: {
+        scripts: {
+            files: ['hippify/hippify.js'],
+            tasks: ['default'],
+            options: {
+                spawn: false,
+            },
+        },
+    },
   });
 
-  // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
-  // Default task(s).
   grunt.registerTask('default', ['uglify']);
 
 };

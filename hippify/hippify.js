@@ -8,23 +8,11 @@
 
     window.hippify = function() {
 
-        var devicePixelRatio, isHippi, isRelative, get2x, swap, swapData, imgArr, ajaxTest;
+        var devicePixelRatio, isHippi, isRelative, get2x, swap, swapData, imgArr;
 
         devicePixelRatio = window.devicePixelRatio || window.webkitDevicePixelRatio || window.mozDevicePixelRatio;
         isHippi = typeof XMLHttpRequest !== 'undefined' && devicePixelRatio && devicePixelRatio > 1;
         imgArr = Array.prototype.slice.call(document.getElementsByClassName('hippify')) || false;
-
-        ajaxTest = function(url, callback) {
-            if (!window.XMLHttpRequest) return;
-            var xmlHttpReq = new XMLHttpRequest();
-
-            xmlHttpReq.open('GET', url, true);
-            xmlHttpReq.onreadystatechange = function(e) {
-                if (e.target.readyState < 4) return;
-                if (e.target.status == 200) callback && callback();
-            };
-            xmlHttpReq.send();
-        };
 
         isRelative = function(url) {
             return !url.match(/^https?:\/\//i);
@@ -34,20 +22,30 @@
             return url.indexOf('@2x') === -1 ? url.replace(/(.jpg|.jpeg|.png|.gif|.bmp)/, '@2x$1') : url;
         };
 
-        swap = function(img, url) {
-            if(isRelative(url)) {
-                url = get2x(url);
-                ajaxTest(url,function() { img.src = url; });
-            } else {
+        swap = function(img) {
+            
+            var img_test = new Image(),
+                url = img.getAttribute('data-hippi-src') || img.getAttribute('src');
+            
+            img.dataset.hippiOrig = img.getAttribute('src');
+
+            if ( isRelative(url) ) url = get2x(url);
+
+            img_test.onload = function() {
                 img.src = url;
+            };
+
+            img_test.onerror = function() {
+                img.src = img.getAttribute('data-hippi-orig');
             }
+
+            img_test.src = url;
+
         };
 
         if(isHippi) {
             while(imgArr.length) {
-                var i = imgArr.pop(),
-                    dataUrl = i.getAttribute('data-hippi-src') || i.src;
-                swap(i, dataUrl);
+                swap( imgArr.pop() );
             }
         }
 
