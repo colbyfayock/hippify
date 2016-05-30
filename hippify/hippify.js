@@ -1,8 +1,7 @@
-/*
- * Hippify - High PPI image swap
- *
- * Copyright 2013, Colby Fayock
- * colbyfayock.com - @colbyfayock
+/*!
+ * hippify - High PPI image replacement
+ * Version: 0.5.0
+ * @colbyfayock - colbyfayock.com
  */
 (function(){
 
