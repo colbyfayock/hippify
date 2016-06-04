@@ -35,9 +35,3 @@ If your files are remote or would prefer to specify your replacement image path,
 ```
 
 Please note, if files are not relative, no check will be made to see if the file exists.
-
-Uses
--------
-[Detect Mobile Browsers] [1]
-
-[1]: http://detectmobilebrowsers.com/ "Detect Mobile Browsers"
